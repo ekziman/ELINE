@@ -1,4 +1,4 @@
-﻿*, *::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -10,10 +10,6 @@ body {
     background-position-x: center;
     background-position-y: top;
 }
-
-body::-webkit-scrollbar {
-    display: none; /*chrome*/
-  }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
@@ -28,15 +24,7 @@ a {
     margin: auto;
     display: flex;   
 }
-/*-----------------------------
-------------------------------- 
------------- Main -------------
--------------------------------
------------------------------*/
 
-
-
-/*------------------------------------------------------------ header ------------------------------------------------------------*/
 .header {
     max-width: 1410px;
     margin: auto;
@@ -45,6 +33,8 @@ a {
     padding-top: 30px;
     padding-bottom: 33px;
 }
+
+
 
 .header-logo {
     max-width: 300px;
@@ -130,15 +120,7 @@ a {
     line-height: 24px;
     color: #3D1D9A;
 }
-/*-----------------------------
-------------------------------- 
------------ header ------------
--------------------------------
------------------------------*/
 
-
-
-/*------------------------------------------------------------ content-container ------------------------------------------------------------*/
 .content-container {
     max-width: 1410px;
     margin: auto;
@@ -146,7 +128,6 @@ a {
     padding-bottom: 150px;   
 }
 
-/*------------------------------------------------------------ aside ------------------------------------------------------------*/
 .aside {
     max-width: 218px;
 }
@@ -155,95 +136,6 @@ a {
     max-width: 100%;
 }
 
-.sidebar-text {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    color: #3D1D9A;
-    padding-bottom: 28px;
-}
-
-.nav-menu {
-    display: flex;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 60px;
-    padding-left: 0;
-    list-style: none;
-    flex-wrap: wrap;
-}
-
-.nav-link {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.nav-item {
-    align-items: center;
-    padding: 5px 15px; 
-    background: rgba(61, 29, 154, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 10px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-}
-
-.nav-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: #3D1D9A;
-}
-
-.nav-text:hover{
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: #3D1D9A;
-}
-
-.nav-menu-user {
-    margin-top: 0;
-    padding-left: 0;
-    margin-bottom: 0;
-}
-
-.nav-item-user {
-    list-style: none;
-    margin-bottom: 14px;
-}
-
-.nav-text-user {
-    margin-left: 12px;
-}
-
-.nav-text-user:hover {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: #3D1D9A;
-}
-
-.nav-text-user:hover .none{
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-    color: #3D1D9A;
-}
-/*-----------------------------
-------------------------------- 
------------- aside ------------
--------------------------------
------------------------------*/
-
-
-/*------------------------------------------------------------ content ------------------------------------------------------------*/
 .content {
     width: 100%;
     margin-left: 86px;
@@ -286,7 +178,6 @@ a {
     padding-bottom: 20px;
 }
 
-/*------------------------------------------------------------ track-chart ------------------------------------------------------------*/
 .page-main-track {
     display: flex;
     align-items: center;
@@ -408,11 +299,11 @@ a {
 }
 
 .track-artist::after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    background-color: #3D1D9A;
+    display: block; /*превращаем его в блочный элемент*/
+    content: ""; /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+    height: 1px; /*задаём высоту линии*/
+    width: 0%; /*задаём начальную ширину элемента (линии)*/
+    background-color: #3D1D9A; /*цвет фона элемента*/
     transition: width 0.4s ease-in-out;
 }
 
@@ -420,14 +311,11 @@ a {
 .track-artist:focus:after {
     width: 100%;
 }
-/*-----------------------------
-------------------------------- 
---------- track-chart ---------
--------------------------------
------------------------------*/
 
 
-/*------------------------------------------------------------ new-cards ------------------------------------------------------------*/
+
+
+
 .new-cards {
     display: flex;
     flex-wrap: wrap;
@@ -439,6 +327,7 @@ a {
 .new-card {
     position: relative;
     width: 194px;
+    height: 217px;
     margin: 15px;
     background: #DDD1F1;
     box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
@@ -463,7 +352,6 @@ a {
     margin-left: 17px;
     margin-right: 17px;
     display: grid;
-    padding-bottom: 10px;
 }
 
 .card-track {
@@ -487,14 +375,8 @@ a {
     box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
     border-radius: 10px;
 }
-/*-----------------------------
-------------------------------- 
----------- new-cards ----------
--------------------------------
------------------------------*/
 
 
-/*------------------------------------------------------------ playlist-cards ------------------------------------------------------------*/
 .playlist-cards {
     display: flex;
     flex-wrap: wrap;
@@ -542,14 +424,12 @@ a {
     box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
     border-radius: 10px;
 }
-/*-----------------------------
-------------------------------- 
--------- playlist-cards -------
--------------------------------
------------------------------*/
 
 
-/*------------------------------------------------------------ genre-cards ------------------------------------------------------------*/
+
+
+
+
 .genre-cards {
     display: flex;
     flex-wrap: wrap;
@@ -582,56 +462,120 @@ a {
     box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
     border-radius: 10px;
 }
-/*-----------------------------
-------------------------------- 
---------- genre-cards ---------
--------------------------------
------------------------------*/
 
 
 
-/*------------------------------------------------------------ artist-cards ------------------------------------------------------------*/
-.artist-cards {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sidebar-text {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+    padding-bottom: 28px;
+}
+
+.nav-menu {
     display: flex;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+    padding-left: 0;
+    list-style: none;
     flex-wrap: wrap;
-    margin: -15px;
-    justify-content: space-between;
-    padding-bottom: 50px;   
 }
 
-.artist-card {
-    position: relative;
-    width: 194px;
-    
-    margin: 15px;
-    background: #DDD1F1;
-    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
-    border-radius: 10px;   
+.nav-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
-.artist-card-name {
-    font-weight: 600;
+.nav-item {
+    align-items: center;
+    padding: 5px 15px; 
+    background: rgba(61, 29, 154, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.nav-text {
+    font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     color: #3D1D9A;
-    padding-bottom: 10px;
 }
 
-.artist-card:hover {
-    background: #F5EFFF;
-    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
-    border-radius: 10px;
+.nav-text:hover{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
 }
-/*-----------------------------
-------------------------------- 
---------- genre-cards ---------
--------------------------------
------------------------------*/
+
+.nav-menu-user {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-item-user {
+    list-style: none;
+    margin-bottom: 14px;
+}
+
+.nav-text-user {
+    margin-left: 12px;
+}
+
+.nav-text-user:hover {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.nav-text-user:hover .none{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
 
 
 
-/*------------------------------------------------------------ audioplayer ------------------------------------------------------------*/
+
+
 .audioplayer {
     position: fixed;
     width: 100%;
@@ -669,7 +613,7 @@ a {
 
 }
 
-.name-artist {
+.name-creator {
     text-decoration: none;
     font-size: 12px;
     line-height: 15px;
@@ -686,6 +630,8 @@ a {
     display: flex;
     align-items: center;
 }
+
+
 
 .player-time {
     margin: 0 10px;
