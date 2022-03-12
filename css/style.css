@@ -1,0 +1,701 @@
+﻿*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../img/background.jpg');
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+body::-webkit-scrollbar {
+    display: none; /*chrome*/
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1410px;
+    margin: auto;
+    display: flex;   
+}
+/*-----------------------------
+------------------------------- 
+------------ Main -------------
+-------------------------------
+-----------------------------*/
+
+
+
+/*------------------------------------------------------------ header ------------------------------------------------------------*/
+.header {
+    max-width: 1410px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 33px;
+}
+
+.header-logo {
+    max-width: 300px;
+    height: 49px;
+    background: linear-gradient(99.23deg, rgba(29, 36, 154, 0) 1.35%, #674AA0 39.28%);
+    filter: drop-shadow(5px 5px 16px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 48.5px;
+}
+
+.header-nav-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+.hover-link-music:hover {
+    color: aliceblue;
+}
+
+.login:hover {
+    background: #F4DFC2;
+    font-weight: 600;
+}
+.header-nav {
+    margin-left: 86px;
+}
+
+.header-nav-link {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #3D1D9A;
+}
+
+.search-form {
+    margin: auto;
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    max-width: 358px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding-left: 63px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 17px;
+    color: #3D1D9A;
+}
+
+.search-button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.auth {
+    margin-right: 0;
+}
+
+.login {
+    background: linear-gradient(96.85deg, #FFDBA2 10.77%, #FDC66F 90.11%);
+    box-shadow: 9px 9px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 8px 34px;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3D1D9A;
+}
+/*-----------------------------
+------------------------------- 
+----------- header ------------
+-------------------------------
+-----------------------------*/
+
+
+
+/*------------------------------------------------------------ content-container ------------------------------------------------------------*/
+.content-container {
+    max-width: 1410px;
+    margin: auto;
+    display: flex;
+    padding-bottom: 150px;   
+}
+
+/*------------------------------------------------------------ aside ------------------------------------------------------------*/
+.aside {
+    max-width: 218px;
+}
+
+.sidebar {
+    max-width: 100%;
+}
+
+.sidebar-text {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+    padding-bottom: 28px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 60px;
+    padding-left: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    align-items: center;
+    padding: 5px 15px; 
+    background: rgba(61, 29, 154, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+}
+
+.nav-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.nav-text:hover{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.nav-menu-user {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.nav-item-user {
+    list-style: none;
+    margin-bottom: 14px;
+}
+
+.nav-text-user {
+    margin-left: 12px;
+}
+
+.nav-text-user:hover {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.nav-text-user:hover .none{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+/*-----------------------------
+------------------------------- 
+------------ aside ------------
+-------------------------------
+-----------------------------*/
+
+
+/*------------------------------------------------------------ content ------------------------------------------------------------*/
+.content {
+    width: 100%;
+    margin-left: 86px;
+}
+
+.page-main-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25px;
+}
+
+.page-text {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.show-more {
+    background: #FFCF83;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3D1D9A;
+}
+
+.show-more:hover {
+    background: #F4DFC2;
+    font-weight: 600;
+}
+
+
+.page-main-line {
+    padding-bottom: 20px;
+}
+
+/*------------------------------------------------------------ track-chart ------------------------------------------------------------*/
+.page-main-track {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 35px;
+}
+
+.page-main__track-left {
+    max-width: 540px;
+    position: relative;
+}
+
+.page-main__track-right {
+    position: relative;
+    max-width: 540px;
+}
+
+.track {
+    width: 540px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+}
+
+.track-number {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 15px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #3D1D9A;
+}
+
+.track-start {
+    display: none;
+}
+
+.start-button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.track-avatar {
+    margin-top: 5px;
+}
+
+.track-about {
+    margin-left: 10px;
+    display: grid;
+}
+
+.track-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #3D1D9A;
+}
+
+.track-artist {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #3D1D9A;
+}
+
+.track-info {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.like-track {
+    position: fixed;
+    right: 88px;
+}
+
+.track-time {
+    position: fixed;
+    right: 48px;
+}
+
+.track-more {
+    position: fixed;
+    right: 0;
+}
+
+.track:hover {
+    background: rgba(255, 255, 255, 0.29);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.track:hover .track-number {
+    display: none;
+}
+
+.track:hover .track-start {
+    display: inline;
+}
+
+.track-artist:hover {
+    display: inline-block;
+}
+
+.track-artist::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: #3D1D9A;
+    transition: width 0.4s ease-in-out;
+}
+
+.track-artist:hover:after,
+.track-artist:focus:after {
+    width: 100%;
+}
+/*-----------------------------
+------------------------------- 
+--------- track-chart ---------
+-------------------------------
+-----------------------------*/
+
+
+/*------------------------------------------------------------ new-cards ------------------------------------------------------------*/
+.new-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.new-card {
+    position: relative;
+    width: 194px;
+    margin: 15px;
+    background: #DDD1F1;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;
+}
+
+.avatar-card {
+    margin: 15px 30px;
+    border: 2px solid #FFCF83;
+    box-sizing: border-box;
+    border-radius: 100px;
+    overflow: hidden;
+    height: 130px;
+    width: 130px;
+}
+
+.avatar {
+    object-fit: cover;
+}
+
+.card-about {
+    margin-left: 17px;
+    margin-right: 17px;
+    display: grid;
+    padding-bottom: 10px;
+}
+
+.card-track {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #3D1D9A;
+}
+
+.card-artist {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #3D1D9A;
+}
+
+.new-card:hover {
+    background: #F5EFFF;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;
+}
+/*-----------------------------
+------------------------------- 
+---------- new-cards ----------
+-------------------------------
+-----------------------------*/
+
+
+/*------------------------------------------------------------ playlist-cards ------------------------------------------------------------*/
+.playlist-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.playlist-card {
+    position: relative;
+    width: 194px;
+    height: 140px;
+    margin: 15px;
+    background: #F4DFC2;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+}
+
+.playlist-card-color {
+    background: #DDD1F1;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(100px);
+    border-radius: 20px;
+}
+
+.playlist-avatar {
+    margin: 0 60px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.playlist-card-name {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #3D1D9A;
+}
+
+.playlist-card:hover {
+    background: #F5EFFF;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;
+}
+/*-----------------------------
+------------------------------- 
+-------- playlist-cards -------
+-------------------------------
+-----------------------------*/
+
+
+/*------------------------------------------------------------ genre-cards ------------------------------------------------------------*/
+.genre-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    justify-content: space-between;
+    padding-bottom: 50px;   
+}
+
+.genre-card {
+    position: relative;
+    width: 194px;
+    
+    margin: 15px;
+    background: #DDD1F1;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;   
+}
+
+.genre-card-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #3D1D9A;
+    padding-bottom: 10px;
+}
+
+.genre-card:hover {
+    background: #F5EFFF;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;
+}
+/*-----------------------------
+------------------------------- 
+--------- genre-cards ---------
+-------------------------------
+-----------------------------*/
+
+
+
+/*------------------------------------------------------------ artist-cards ------------------------------------------------------------*/
+.artist-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    justify-content: space-between;
+    padding-bottom: 50px;   
+}
+
+.artist-card {
+    position: relative;
+    width: 194px;
+    
+    margin: 15px;
+    background: #DDD1F1;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;   
+}
+
+.artist-card-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    color: #3D1D9A;
+    padding-bottom: 10px;
+}
+
+.artist-card:hover {
+    background: #F5EFFF;
+    box-shadow: 4px 4px 10px rgba(61, 29, 154, 0.5);
+    border-radius: 10px;
+}
+/*-----------------------------
+------------------------------- 
+--------- genre-cards ---------
+-------------------------------
+-----------------------------*/
+
+
+
+/*------------------------------------------------------------ audioplayer ------------------------------------------------------------*/
+.audioplayer {
+    position: fixed;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 10px;
+}
+
+.audioplayer .container {
+    background: radial-gradient(138.89% 367.19% at 47.3% 50%, rgba(215, 201, 242, 0.65) 16.67%, #B29DDC 100%);
+    border-radius: 20px;
+    color: #3D1D9A;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.player {
+    margin: auto;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-music {
+    display: grid;
+    margin-left: 38px;
+}
+
+.name-music {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+
+}
+
+.name-artist {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #3D1D9A;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+}
+
+.playback-bar {
+    display: flex;
+    align-items: center;
+}
+
+.player-time {
+    margin: 0 10px;
+}
+
+.player-button {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
