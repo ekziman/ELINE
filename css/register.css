@@ -57,37 +57,13 @@
     margin-bottom: 15px;
 }
 
-.eline-form__input-more {
-    display: flex;
-    margin: auto;
-    width: 300px;
-}
-
-.remember-me {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    margin-right: 5px;
-    color: rgba(0, 0, 0, 0.5); 
-}
-
-.forgot-password {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #3D1D9A;
-    margin-left: auto;
-}
-
 .eline-form__btns_center {
     display: flex;
     align-items: center;
-    padding-top: 20px;
 }
 
 .eline-form__btn_center {
     cursor: pointer;
-    width: 204px;   
     height: 48px;
     margin: auto;
     background: #FFCF83;
@@ -118,7 +94,7 @@
     padding-bottom: 1px;   
 }
 
-.registration-title {
+.sign-title {
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
