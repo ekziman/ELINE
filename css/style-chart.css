@@ -58,59 +58,56 @@
 }
 
 /*------------------------------------------------------------ track-chart ------------------------------------------------------------*/
-.page-tracks {
+.page-main-tracks {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-bottom: 35px;
 }
 
-.track-chart {
+.page-main__tracks {
     width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    margin-bottom: 5px;
-
+    position: relative;
 }
 
-.track-number {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 15px;
+.page-main__tracks li {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: .3s linear;
+}
+.page-main__tracks li:hover {
+    background: rgba(255, 255, 255, 0.29);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+}
+
+.songItem {
+    width: 100%;
+    height: 50px;
+}
+
+.page-main-tracks li span {
+    width: 22px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: #3D1D9A;
 }
 
-.track-start {
-    display: none;
+.page-main-tracks li img {
+    width: 40px;
+    height: 40px;
+    margin-left: 17px;
+    border-radius: 100px;
 }
 
-.start-button {
-    background-color: transparent;
-    border: none;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
-    cursor: pointer;
-    margin-top: 3px;
-}
-
-.track-avatar {
-    margin-top: 5px;
-}
-
-.track-about {
-    margin-left: 10px;
-    display: grid;
-}
-
-.track-name {
+.page-main-tracks li h5 {
+    margin-left: 14px;
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
@@ -118,68 +115,21 @@
     color: #3D1D9A;
 }
 
-.track-artist {
-    text-decoration: none;
+.page-main-tracks li h5 .subtitle {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.01em;
     color: #3D1D9A;
 }
-
-.track-info {
-    margin: auto;
-    display: flex;
-    align-items: center;
+.page-main-tracks li .bi {
+    margin-left: auto;
+    margin-right: 15px;
+    top: 14px;
+    font-size: 24px;
+    color: #3D1D9A;
 }
 
-.like-track {
-    position: fixed;
-    right: 88px;
-}
-
-.track-time {
-    position: fixed;
-    right: 48px;
-}
-
-.track-more {
-    position: fixed;
-    right: 0;
-}
-
-.track-chart:hover {
-    background: rgba(255, 255, 255, 0.29);
-    backdrop-filter: blur(15px);
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-.track-chart:hover .track-number {
-    display: none;
-}
-
-.track-chart:hover .track-start {
-    display: inline;
-}
-
-.track-artist:hover {
-    display: inline-block;
-}
-
-.track-artist::after {
-    display: block;
-    content: "";
-    height: 1px;
-    width: 0%;
-    background-color: #3D1D9A;
-    transition: width 0.4s ease-in-out;
-}
-
-.track-artist:hover:after,
-.track-artist:focus:after {
-    width: 100%;
-}
 /*-----------------------------
 ------------------------------- 
 --------- track-chart ---------

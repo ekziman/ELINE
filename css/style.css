@@ -1,4 +1,4 @@
-*, *::before, *::after {
+﻿*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -745,12 +745,19 @@ a {
     line-height: 20px;
     color: #3D1D9A;
 }
+
+.player .master_play .info-bar {
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
 .player .master_play #currentStart {
     margin: 0 0 0 0;
 }
 .player .master_play .bar {
     position: relative;
-    width: 53%;
+    width: 100%;
     height: 10px;
     background: #FFFFFFCC;
     margin: 0 15px 0 10px;
