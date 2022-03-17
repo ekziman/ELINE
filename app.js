@@ -56,6 +56,46 @@ const songs = [
         songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/10.jpg",
     },
+    {
+        id:"11",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/11.jpg",
+    },
+    {
+        id:"12",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/12.jpg",
+    },
+    {
+        id:"13",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/13.jpg",
+    },
+    {
+        id:"14",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/14.jpg",
+    },
+    {
+        id:"15",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/15.jpg",
+    },
+    {
+        id:"16",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/16.jpg",
+    },
+    {
+        id:"17",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/17.jpg",
+    },
+    {
+        id:"18",
+        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        poster: "img/poster/18.jpg",
+    },
 ]
 
 Array.from(document.getElementsByClassName('songItem')).forEach((element, i)=>{
@@ -111,6 +151,7 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
         e.target.classList.remove('bi-play-circle-fill');
         e.target.classList.add('bi-pause-circle-fill');
         music.src = `audio/${index}.mp3`;
+
         poster_master_play.src = `img/poster/${index}.jpg`;
         music.play();
         let song_title = songs.filter((ele)=>{
@@ -186,19 +227,19 @@ let vol_bar = document.getElementsByClassName('vol_bar')[0];
 
 vol.addEventListener('change', ()=>{
     if (vol.value == 0) {
-        vol_icon.classList.remove('bi-volume-down-fill');
-        vol_icon.classList.add('bi-volume-mute-fill');
-        vol_icon.classList.remove('bi-volume-up-fill');
+        vol_icon.classList.remove('bi-volume-down');
+        vol_icon.classList.add('bi-volume-mute');
+        vol_icon.classList.remove('bi-volume-up');
     }
     if (vol.value > 0) {
-        vol_icon.classList.add('bi-volume-down-fill');
-        vol_icon.classList.remove('bi-volume-mute-fill');
-        vol_icon.classList.remove('bi-volume-up-fill');
+        vol_icon.classList.add('bi-volume-down');
+        vol_icon.classList.remove('bi-volume-mute');
+        vol_icon.classList.remove('bi-volume-up');
     }
     if (vol.value > 50) {
-        vol_icon.classList.remove('bi-volume-down-fill');
-        vol_icon.classList.remove('bi-volume-mute-fill');
-        vol_icon.classList.add('bi-volume-up-fill');
+        vol_icon.classList.remove('bi-volume-down');
+        vol_icon.classList.remove('bi-volume-mute');
+        vol_icon.classList.add('bi-volume-up');
     }
 
     let vol_a = vol.value;
