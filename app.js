@@ -18,37 +18,44 @@ const songs = [
     // all object type 
     {
         id:"3",
-        songName: `Cartoon - On & On <br><div class="subtitle"> Daniel Levi</div>`,
+        songName: `Cartoon - On & On <br>
+        <div class="subtitle"> Daniel Levi</div>`,
         poster: "img/poster/3.jpg",
     },
     {
         id:"4",
-        songName: `Warriyo - Mortals <br><div class="subtitle">Mortals</div>`,
+        songName: `Warriyo - Mortals <br>
+        <div class="subtitle">Mortals</div>`,
         poster: "img/poster/4.jpg",
     },
     {
         id:"5",
-        songName: `Ertugrul Gazi <br><div class="subtitle">Ertugrul</div>`,
+        songName: `Ertugrul Gazi <br>
+        <div class="subtitle">Ertugrul</div>`,
         poster: "img/poster/5.jpg",
     },
     {
         id:"6",
-        songName: `Electronic Music <br><div class="subtitle">Electro</div>`,
+        songName: `Electronic Music <br>
+        <div class="subtitle">Electro</div>`,
         poster: "img/poster/6.jpg",
     },
     {
         id:"7",
-        songName: `Agar Tum Sath Ho <br><div class="subtitle">Tamashaa</div>`,
+        songName: `Agar Tum Sath Ho <br>
+        <div class="subtitle">Tamashaa</div>`,
         poster: "img/poster/7.jpg",
     },
     {
         id:"8",
-        songName: `Suna Hai <br><div class="subtitle">Neha Kakker</div>`,
+        songName: `Suna Hai <br>
+        <div class="subtitle">Neha Kakker</div>`,
         poster: "img/poster/8.jpg",
     },
     {
         id:"9",
-        songName: `Dilber <br><div class="subtitle">Satyameva Jayate</div>`,
+        songName: `Dilber <br>
+        <div class="subtitle">Satyameva Jayate</div>`,
         poster: "img/poster/9.jpg",
     },
     {
@@ -58,42 +65,50 @@ const songs = [
     },
     {
         id:"11",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Duniya <br>
+        <div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/11.jpg",
     },
     {
         id:"12",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Duniya <br>
+        <div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/12.jpg",
     },
     {
         id:"13",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Duniya <br>
+        <div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/13.jpg",
     },
     {
         id:"14",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Duniya <br>
+        <div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/14.jpg",
     },
     {
         id:"15",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Duniya <br>
+        <div class="subtitle">Luka Chuppi</div>`,
         poster: "img/poster/15.jpg",
     },
     {
         id:"16",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Voting Men <br>
+        <div class="subtitle">Incredibox</div>`,
         poster: "img/poster/16.jpg",
     },
     {
         id:"17",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `If you're okay <br>
+        <div class="subtitle">Incredibox</div>`,
         poster: "img/poster/17.jpg",
     },
     {
         id:"18",
-        songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
+        songName: `Good day(NO) <br>
+        <div class="subtitle">Incredibox</div>`,
         poster: "img/poster/18.jpg",
     },
 ]
@@ -151,7 +166,6 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
         e.target.classList.remove('bi-play-circle-fill');
         e.target.classList.add('bi-pause-circle-fill');
         music.src = `audio/${index}.mp3`;
-
         poster_master_play.src = `img/poster/${index}.jpg`;
         music.play();
         let song_title = songs.filter((ele)=>{
@@ -165,11 +179,11 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
         master_play.classList.remove('bi-play-fill');
         master_play.classList.add('bi-pause-fill');
         wave.classList.add('active2');
-        music.addEventListener('ended',()=>{
-            master_play.classList.add('bi-play-fill');
-            master_play.classList.remove('bi-pause-fill');
-            wave.classList.remove('active2');
-        })
+        // music.addEventListener('ended',()=>{
+        //     master_play.classList.add('bi-play-fill');
+        //     master_play.classList.remove('bi-pause-fill');
+        //     wave.classList.remove('active2');
+        // })
         makeAllBackgrounds();
         Array.from(document.getElementsByClassName('songItem'))[`${index-1}`].style.background = "rgba(255, 255, 255, 0.35)";
     })
@@ -213,9 +227,25 @@ seek.addEventListener('change', ()=>{
 
 
 music.addEventListener('ended', ()=>{
-    masterPlay.classList.add('bi-play-fill');
-    masterPlay.classList.remove('bi-pause-fill');
-    wave.classList.remove('active2');
+    masterPlay.classList.add('bi-pause-fill');
+    wave.classList.add('active2');
+    index ++;
+    music.src = `audio/${index}.mp3`;
+    poster_master_play.src = `img/poster/${index}.jpg`;
+    music.play();
+    let song_title = songs.filter((ele)=>{
+        return ele.id == index;
+    })
+    song_title.forEach(ele => {
+        let {songName} = ele;
+        title.innerHTML = songName;
+    })
+
+    makeAllBackgrounds();
+    Array.from(document.getElementsByClassName('songItem'))[`${index-1}`].style.background = "rgba(255, 255, 255, 0.35)";
+    makeAllPlays();
+    document.getElementsByClassName('playlistPlay')[index-1].classList.remove('bi-play-circle-fill');
+    document.getElementsByClassName('playlistPlay')[index-1].classList.add('bi-pause-circle-fill');
 })
 
 
