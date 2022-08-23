@@ -1,3 +1,3 @@
 # ELINE
 
-![This is an image](preview.PNG)
+![This is an image](preview.png)
